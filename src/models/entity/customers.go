@@ -8,8 +8,8 @@ type Customers struct {
 	FullName    string
 	LegalName   string
 	BirthPlace  string
-	BirthDate   time.Time
-	Salary      float64
+	BirthDate   string
+	Salary      string
 	KTPPhoto    string
 	SelfiePhoto string
 	CreatedAt   time.Time

@@ -8,6 +8,5 @@ import (
 
 type CustomerRepository interface {
 	Create(ctx context.Context, tx *sql.Tx, customer entity.Customers) entity.Customers
-	Update(ctx context.Context, tx *sql.Tx, customer entity.Customers) entity.Customers
 	FindAll(ctx context.Context, tx *sql.Tx) []entity.Customers
 }

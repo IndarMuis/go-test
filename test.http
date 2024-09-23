@@ -1,0 +1,91 @@
+### Cutomer
+POST http://localhost:3000/api/v1/customers
+Content-Type: application/json
+Accept: application/json
+
+//{
+//  "nik": "8291027618291002",
+//  "full_name": "Annisa",
+//  "legal_name": "Annisa",
+//  "birth_place": "Jakarta",
+//  "birth_date": "2000-04-17",
+//  "salary": "10000000",
+//  "ktp_photo": "http:/annisa_ktp.png",
+//  "selfie_photo": "http:/annisa_selfie.png"
+//}
+{
+  "nik": "3214672812910938",
+  "full_name": "Budi",
+  "legal_name": "Budi",
+  "birth_place": "Jakarta",
+  "birth_date": "2000-04-17",
+  "salary": "10000000",
+  "ktp_photo": "http:/budi_ktp.png",
+  "selfie_photo": "http:/budi_selfie.png"
+}
+
+
+
+### Customer Tenor
+POST http://localhost:3000/api/v1/customers_tenor
+Content-Type: application/json
+Accept: application/json
+
+//{
+//  "customer_id": 1,
+//  "total_month": 1,
+//  "tenor_amount_limit": 100000,
+//  "start_date": "2024-10-01",
+//  "end_date": "2024-11-01"
+//}
+//{
+//  "customer_id": 1,
+//  "total_month": 2,
+//  "tenor_amount_limit": 500000,
+//  "start_date": "2024-10-01",
+//  "end_date": "2024-12-01"
+//}
+//{
+//  "customer_id": 1,
+//  "total_month": 3,
+//  "tenor_amount_limit": 500000,
+//  "start_date": "2024-10-01",
+//  "end_date": "2025-01-01"
+//}
+{
+  "customer_id": 1,
+  "total_month": 4,
+  "tenor_amount_limit": 700000,
+  "start_date": "2024-10-01",
+  "end_date": "2025-02-01"
+}
+
+### Activate Tenor
+PUT http://localhost:3000/api/v1/customers_tenor/set
+Content-Type: application/json
+Accept: application/json
+
+{
+  "customer_id": 1,
+  "total_month": 4,
+  "status": "ACTIVE"
+}
+
+### Find Tenor By Customer Id
+GET http://localhost:3000/api/v1/customers_tenor/1
+Content-Type: application/json
+Accept: application/json
+
+### Customer Transaction
+POST http://localhost:3000/api/v1/customers_transaction
+Content-Type: application/json
+Accept: application/json
+
+{
+  "customer_id": 1,
+  "otr": 700000,
+  "admin_fee": 2000,
+  "installment_amount": 175000,
+  "interest_amount": 2,
+  "asset_name": "Logitech Keyboard"
+}

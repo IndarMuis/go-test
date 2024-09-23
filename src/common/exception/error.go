@@ -1,10 +1,17 @@
 package exception
 
-import "fmt"
+type NotFoundError struct {
+	Error string
+}
 
-func PanicIfError(err error) {
-	if err != nil {
-		fmt.Println("ERROR : ", err.Error())
-		panic(err)
-	}
+type GeneralError struct {
+	Error string
+}
+
+func NewNotFoundError(error string) NotFoundError {
+	return NotFoundError{Error: error}
+}
+
+func NewGeneralError(error string) GeneralError {
+	return GeneralError{Error: error}
 }
